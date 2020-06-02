@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Enjoyment{% endblock title %}
+
+{% block content %}
+
+<h1>How does it work?</h1>
+
+<p>
+  &nbsp;&nbsp;Well, let's start at the beginning of it. We needed a Python Virtual Environment that wraps all dependencies and environment variables. Our software requires a safe and independent file, so that's what we are focusing on at the moment.
+  After creating the event(Virtual Environment), I carefully followed those steps presented in the book, installed Django and created a database.<br>
+  &nbsp;&nbsp;Django is here solve a set of problems that arise when trying to merge design(Html, CSS etc.), business and data. We are describing this architecture as Model-Template-View(MTV), which we followed when implementing the current website.
+  What the user sees is a template, which inherits its attributes from the parent class, which is available to the developer. I've chosen the main page as the parent class, created an inheritance which led to the pages requested to be an extension of the 'base.html'.<br>
+  &nbsp;&nbsp;In the end, I am working on hosting the website using the PythonAnywhere guide, then designing the pages individually and creating an eye-catching webpage.
+</p>
+
+{% endblock content %}
