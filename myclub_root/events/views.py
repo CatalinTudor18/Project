@@ -3,13 +3,14 @@ from django.shortcuts import render
 from datetime import date
 import calendar
 from calendar import HTMLCalendar
+from django.http import HttpResponse
 
 def index(request, year=date.today().year,month=date.today().month):
     year = int(year)
     month = int(month)
     if year < 2000 or year > 2099 : year = date.today().year
     month_name = calendar.month_name[month]
-    title = "Catalin Tudor's Webpage"
+    title = "Webpage"
     cal = HTMLCalendar().formatmonth(year, month)
     announcements = [
      {
@@ -25,7 +26,7 @@ def index(request, year=date.today().year,month=date.today().month):
          'date': '26-5-2020', 'announcement': "Working on those requirements"
      },
     ]
-    return render(request, 'events/calendar_base.html', {'title' : title, 'cal' : cal, 'announcements': announcements})
+    return render(request, 'events/calendar_base.html', {'new_item_text': request.POST.get('item_text', '')}, {'title' : title, 'cal' : cal, 'announcements': announcements})
 
 def About(request):
     return render(request, 'events/About.html')
