@@ -8,6 +8,7 @@ urlpatterns = [
     path('Upcoming_year/', views.Upcoming_year, name='Upcoming_year'),
     path('How/', views.How, name='How'),
     path('About/', views.About, name='About'),
+    path('CV/',views.CV, name='CV'),
 
     re_path(r'^(?P<year>[0-9]{4})/(?P<month>0?[1-9]|1[0-2])/', views.index, name='index'),
 ]

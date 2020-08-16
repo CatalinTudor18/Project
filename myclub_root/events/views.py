@@ -1,9 +1,10 @@
-from django.shortcuts import render
-#from django.http import HttpResponse
+
+from django.shortcuts import redirect, render
 from datetime import date
 import calendar
 from calendar import HTMLCalendar
 from django.http import HttpResponse
+from events.models import Item
 
 def index(request, year=date.today().year,month=date.today().month):
     year = int(year)
@@ -26,7 +27,7 @@ def index(request, year=date.today().year,month=date.today().month):
          'date': '26-5-2020', 'announcement': "Working on those requirements"
      },
     ]
-    return render(request, 'events/calendar_base.html', {'new_item_text': request.POST.get('item_text', '')}, {'title' : title, 'cal' : cal, 'announcements': announcements})
+    return render(request, 'events/calendar_base.html', {'title' : title, 'cal' : cal, 'announcements': announcements})
 
 def About(request):
     return render(request, 'events/About.html')
@@ -42,3 +43,15 @@ def How(request):
 
 def Home(request):
     return render(request, 'events/Home.html')
+
+def CV(request):
+
+    #if request.method == 'POST':
+        #Item.objects.create(text=request.POST['item_text'])
+        #return redirect('/')
+    #else:
+        #new_item_text = ''
+
+    #items = Item.objects.all()
+    #{'items': items}
+    return render(request, 'events/CV.html')
