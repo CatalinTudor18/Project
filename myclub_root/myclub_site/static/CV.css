@@ -1,13 +1,77 @@
-@charset "utf-8";
-#header {
-      border-style: none;
-      width: 800px;
-      height: auto;
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+  h1 {
+    font-size: 105px;
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+
   }
-#body {
-      background-color: #E0E0E0;
-      font-family: "Trebuchet MS", Helvetica, sans-serif;
-      font-size: 0.9em;
-      text-align: justify;
-      color: #474747;
+  h2 {
+    color: rgb(241,169,164);
+    font-family: 'Dancing Script', cursive;
   }
+  .container-userinput {
+    color: blue;
+    border-radius: 10px;
+    margin : 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: rgb(20,55,90);
+  }
+  .container-main {
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;}
+
+  label {
+    color: white;
+  }
+  small {
+    font-size: smaller;
+    color: red;
+  }
+
+  .btn-primary{
+    background-color: rgb(20,30,90);
+    color: rgb(241,169,164);
+    border: 4px solid rgb(241,169,164);
+    font-size:14px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+
+.btn-primary:hover{
+    background-color: rgb(241,169,164);
+    color: rgb(20,30,90);
+
+}
+
+  #footer {
+      text-align: center;
+      font-size: 0.8em;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #FFFFFF;.
+      border-top: thin solid #BBBBBB;
+      clear: both;
+      color: #969696;
+  }
+
+
+  @media screen and (max-width: 1000px)
+{
+    .container-main{
+        max-width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
