@@ -50,6 +50,9 @@ def How(request):
 def Home(request):
     return render(request, 'events/Home.html')
 
+def final(request):
+    return render(request, 'events/final.html')
+
 def CV(request):
     print('\n YaY')
     if request.method == 'POST':

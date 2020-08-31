@@ -10,6 +10,7 @@ urlpatterns = [
     path('About/', views.About, name='About'),
     path('CV/',views.CV, name='CV'),
     path('sent/',views.CV, name='sent'),
+    path('final/',views.final, name='final'),
 
     re_path(r'^(?P<year>[0-9]{4})/(?P<month>0?[1-9]|1[0-2])/', views.index, name='index'),
 ]
