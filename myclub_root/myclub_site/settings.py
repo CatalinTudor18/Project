@@ -25,8 +25,7 @@ SECRET_KEY = '-n&q4x-5a4d7c90&6fo6x4v&@078a)7cwbe^8wazm-o1=s0a6v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['catalintudor.pythonanywhere.com', '127.0.0.1']
 
 # Application definition
 
