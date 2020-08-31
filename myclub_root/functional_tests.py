@@ -17,21 +17,84 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.get('http://localhost:8000/CV')
 
 
-        inputbox = self.browser.find_element_by_id('fname')
+        inputbox = self.browser.find_element_by_id('name')
         self.assertEqual(
-            inputbox.get_attribute('placeholder'),
-            'ff'
+            inputbox.get_attribute('name'),
+            'name'
         )
-        inputbox.send_keys("Catalin")
-        inputbox.send_keys(Keys.ENTER)
+        inputbox.send_keys("Catalin Tudor")
         time.sleep(1)
 
-        inputbox = self.browser.find_element_by_id('lname')
+        inputbox = self.browser.find_element_by_id('email')
         self.assertEqual(
             inputbox.get_attribute('placeholder'),
-            'll'
+            'Enter Email'
         )
-        inputbox.send_keys("Tudor")
+        inputbox.send_keys("tudorkatalin2000@gmail.com")
+
+        inputbox = self.browser.find_element_by_id('phone')
+        self.assertEqual(
+            inputbox.get_attribute('placeholder'),
+            'Phone No.'
+        )
+        inputbox.send_keys("0748933953")
+
+        inputbox = self.browser.find_element_by_id('address')
+        self.assertEqual(
+            inputbox.get_attribute('placeholder'),
+            'Your address'
+        )
+        inputbox.send_keys("Pistol Street, Number 358, Odobesti, Dambovita, Romania")
+
+        inputbox = self.browser.find_element_by_id('linkedin')
+        self.assertEqual(
+            inputbox.get_attribute('placeholder'),
+            'Enter the link to your LinkedIn profile'
+        )
+        inputbox.send_keys("https://www.linkedin.com/in/catalin-t-746a4911b")
+
+        inputbox = self.browser.find_element_by_id('summary')
+        self.assertEqual(
+            inputbox.get_attribute('placeholder'),
+            'Summary'
+        )
+        inputbox.send_keys("An enthusiast Computer Science final year student. Ready to tackle problems, especially those related to machine learning. A nerd who loves Atom, OS X and enjoys to customize his working environment. Always looking for another way of solving a given task, and learning new technologies and tools if the need arises. I am focused on improving my lifestyle by committing to a learning process that relies on hard work.")
+
+        inputbox = self.browser.find_element_by_id('school')
+        self.assertEqual(
+            inputbox.get_attribute('name'),
+            'school 1'
+        )
+        inputbox.send_keys("Univesity of Birmingham")
+
+        inputbox = self.browser.find_element_by_id('year')
+        self.assertEqual(
+            inputbox.get_attribute('name'),
+            'year 1'
+        )
+        inputbox.send_keys("2021")
+
+        inputbox = self.browser.find_element_by_id('marks')
+        self.assertEqual(
+            inputbox.get_attribute('name'),
+            'marks 1'
+        )
+        inputbox.send_keys("2.1")
+
+        inputbox = self.browser.find_element_by_id('skills')
+        self.assertEqual(
+            inputbox.get_attribute('name'),
+            'skills'
+        )
+        inputbox.send_keys("Eclipse, Java, HTML, CSS, Python, Machine Learning")
+
+        inputbox = self.browser.find_element_by_id('experience')
+        self.assertEqual(
+            inputbox.get_attribute('name'),
+            'experience'
+        )
+        inputbox.send_keys("Website Administrator - I used to post on the webiste that I administer since high-school.")
+
         inputbox.send_keys(Keys.ENTER)
         time.sleep(1)
 

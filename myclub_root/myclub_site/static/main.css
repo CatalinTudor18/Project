@@ -1,16 +1,10 @@
 @charset "utf-8";
-#header {
-      border-style: none;
-      width: 800px;
-      height: auto;
-  }
- #wrapper {
-     margin-top: 0px;
-     margin-left: auto;
-     margin-right: auto;
-     background-color: #FFFFFF;
-     width: 800px;
-  }
+
+
+ jumbotron{
+   padding:1rem;
+   border-radius: 0;
+ }
  body {
      background-color: #E0E0E0;
      font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -21,6 +15,7 @@
  h1 {
      color: #270c39;
   }
+
  #footer {
      text-align: center;
      font-size: 0.8em;
@@ -34,13 +29,14 @@
 
  #main {
      width: 560px;
-     float: left;
+     float: center;
      margin: 0 10px 20px 50px;
      padding-right: 10px;
  }
  #logo {
-     padding: 10px;
-     float: left;
+   float: left;
+   width: 45px;
+   height: 100%
   }
  #top_menu {
      float: right;
@@ -67,7 +63,7 @@
  }
 
  #navcontainer ul li{
-   margin-left: 75px;
+   margin-left: 10px;
    display: inline;
 
  }
@@ -106,31 +102,6 @@
    }
  }
 
- .container_left{
-   position : left;
-   padding-left: 11px;
-   height: 0px;
-   top: 0px;
-   width: 200px;
- }
-
- .container_right{
-   position : right;
-   padding-left : 1250px;
-   height: 0px;
-   top: 0px;
-   width: 200px;
- }
-
- .container_left img {
-    width: 400px;
-    height: 1051px;
-}
-
-.container_right img {
-   width: 400px;
-   height: 1051px;
-}
  table.month td {
       border: 1px solid rgb(221, 221, 221);
       padding: 20px;

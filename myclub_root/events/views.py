@@ -1,5 +1,6 @@
 
 from django.shortcuts import redirect, render
+from django.core.mail import send_mail, BadHeaderError
 from datetime import date
 import smtplib
 import imghdr
@@ -50,13 +51,13 @@ def Home(request):
     return render(request, 'events/Home.html')
 
 def CV(request):
-
+    print('\n YaY')
     if request.method == 'POST':
         global template_loc, tmp, img_h, data
         data = request.POST
 
         template_loc = "myclub_site/static/Template.jpg"
-        tmp = Image.open(template_loc)
+        tmp = Image.open(template_loc, "r")
         smallsz = 15
         textsz = 30
         mediumsz = 35
@@ -106,8 +107,7 @@ def CV(request):
 
     #Drawing Skills ----------
         xSkil, ySkil = drawtxt("Skills", 100, (0,0,0), iconsize, 180, yExp + 50)
-        xSkil, ySkil = drawtxt(data['skills'], 100, (0,0,0), textsz, 180 + 20, ySkil)
-        tmp.show()
+        xSkil, ySkil = drawtxt(data['skills'], 100, (0,0,0), textsz, 180 + 20, ySkil + 20)
 
         return render(request, 'events/sent.html')
     return render(request, 'events/CV.html')
@@ -125,5 +125,9 @@ def drawtxt(text, numberWords,fontcolor, size, x, y, path="/myclub_site/static/O
         p, j = font.getsize(line)
         draw.text(xy=(x, y), text = line, fill = fontcolor, font = font)
         y = y + j + 6
+
+    if print:
+        tmp.show()
+        tmp.save('events/CV_' + str(data['name'].replace(" ", "") + '.pdf'))
 
     return x, y

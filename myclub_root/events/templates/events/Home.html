@@ -3,13 +3,23 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
+<div class="container-fluid padding">
+  <div class="row text-center padding">
 
-<div id="navcontainer">
-<ul>
-  <li><a href="/Enjoy">Past year</a></li>
-  <li><a href="/Upcoming_year">Upcoming Year</a></li>
-  <li><a href="/How">How</a></li>
-</ul>
+
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <a href="/Enjoy">Past year</a>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <a href="/Upcoming_year">Upcoming Year</a>
+  </div>
+
+  <div class="col-xs-12 col-md-4">
+    <a href="/How">How does Django work</a>
+  </div>
+
+  </div>
 </div>
 
 {% endblock content %}
